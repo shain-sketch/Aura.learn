@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Learn - NextGen LMS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bg-dark: #0f0c1b;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --primary: #8b5cf6;
+            --secondary: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            background: rgba(15, 12, 27, 0.7);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            padding: 8rem 8% 6rem 8%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .container {
+            padding: 4rem 8%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+            transition: border 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            transform: translateY(-4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Aura.Learn</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <a href="dashboard.html" class="btn-nav">Get Started</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Master Your Craft<br>With <span>Cinematic Learning</span></h1>
+        <p>Experience an exquisitely designed learning ecosystem built for deep focus, premium curation, and accelerated skill acquisition.</p>
+        <a href="courses.html" class="btn-nav" style="padding: 1rem 2.5rem; font-size: 1rem;">Explore Ecosystem</a>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Why Aura Learn?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="margin-bottom: 1rem; color: var(--secondary);">01 / Immersive Interface</h3>
+                <p style="color: var(--text-muted);">A dark, distractions-free UI optimized for cognitive endurance and beautiful navigation.</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">02 / Expert Curations</h3>
+                <p style="color: var(--text-muted);">We don't host millions of courses. We host the absolute top 1% of premium industry pathways.</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem; color: #38bdf8;">03 / Smart Metrics</h3>
+                <p style="color: var(--text-muted);">Track your structural knowledge acquisition with analytics built around true mastery, not just progress bars.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Aura Learn Ecosystem. Crafted for perfection.
+    </footer>
+
+</body>
+</html>
